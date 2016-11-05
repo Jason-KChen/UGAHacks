@@ -4,18 +4,17 @@
 
 body{
     font-family: "Source Sans Pro", Helvetica, sans-serif;
-    width:100px;
+    width:275px;
     margin:0 auto;
     text-align: center;
 }
 
 .column{
-    
-    display: inline-block;
+
 }
 
 .panel-default{
-    width: 40%;
+    width: 80%;
     margin: auto;
 }
 #header{
@@ -28,20 +27,24 @@ body{
 #footer{
     font-size: 5pt;
 }
-/*
-#destinationcol{
-    float: left;    
-}
 
-#flightscol{
-    float: right;
-}
-*/
 
 #airline{
-    float: left;   
-    padding: 1em 1em 5em 1em;
+    float: left;
+
 }
 #price{
     float: right;   
+}
+
+.list-group{
+    width: 80%;
+    margin: auto;
+}
+#nav{
+    margin-bottom: 5pt;
+}
+
+#flightinfo{
+    
 }
