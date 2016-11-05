@@ -13,7 +13,8 @@
             {
                 "matches": ["*://*/*"],
                 "js": [
-                    "Scrape.js",
+                    "ScrapeText.js",
+                    "ScrapeImg.js",
                     "ListOfCities.js"
                 ]
             }
