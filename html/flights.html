@@ -18,51 +18,39 @@
     <body>
         <div id="wrap" class="container">
             <div id="header"><h1>AEROPLICITY</h1></div>
-            <div id="nav">
-               
-                    <a href="#">Flying from: </a>
-                    <span id="airport"></span>
-                    <br>
-                    <button type="button" class="btn btn-secondary">Get Location</button>
-           
+            <div id="nav" class="panel panel-default">
+                <div class="panel-body">
+                    <h4>Flying from: </h4>
+                    <span id="airport"> ATL</span>
+                    <h4>To: </h4>
+                    <span id="dest"> LAX</span>
+                </div>
             </div>
             <div>
-                <div id="destinationcol" class="column">
-                    <h4>Destinations</h4>
-                    <div id="destinationinfo">
 
-                        <div id="destname"></div>
-                        <a href="">View flights</a>
-<!--
-                        <div id="airline">
+                <div id="flightscol" class="column" class="panel panel-default">
+                    <div id="flightinfo" class="panel-body">
+                        <div id="airline" >
                             <span id="logo"></span>
                     
-                            <span id="alname"></span>
+                            <span id="alname">Delta</span>
                         </div>
--->
-                    </div>
-                </div>
+                        <div id="price">
+                            <a>
+                                500
+                            </a>
+                        </div>
 <!--
-                <div id="flightscol" class="column">
-                    <h4>Cheapest flights: </h4>
-                    <div id="flightinfo">
--->
-
-                        <!-- Flight names, prices, departure time here -->
-<!--
-                        <div id="price"></div>
                         <div id="departure"></div>
                         <div di="arrival"></div>
+-->
                     </div>
 
                 </div>
--->
             </div>
-            <div class="panel panel-default">
-                <div id="footer" class=""panel-footer"">
-                    Created by team 100k PP at Hack UGA
-                </div>
-            </div>
+        <div id="footer">
+            Created by team 100k PP at Hack UGA
+        </div>
         </div>
 
     </body>

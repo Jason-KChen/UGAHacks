@@ -4,22 +4,31 @@
 
 body{
     font-family: "Source Sans Pro", Helvetica, sans-serif;
-    width:550px;
+    width:100px;
     margin:0 auto;
+    text-align: center;
 }
 
 .column{
-    width: 50%;
+    
     display: inline-block;
 }
 
+.panel-default{
+    width: 40%;
+    margin: auto;
+}
 #header{
     text-align: center;
 }
 
 #header > a{
-    text-align: center; 
+    
 }
+#footer{
+    font-size: 5pt;
+}
+/*
 #destinationcol{
     float: left;    
 }
@@ -27,4 +36,12 @@ body{
 #flightscol{
     float: right;
 }
+*/
 
+#airline{
+    float: left;   
+    padding: 1em 1em 5em 1em;
+}
+#price{
+    float: right;   
+}
