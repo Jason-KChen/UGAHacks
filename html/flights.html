@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <header>
-    <!-- Latest compiled and minified CSS -->
+        <!-- Latest compiled and minified CSS -->
         <link rel="stylesheet" href="main.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
@@ -20,37 +20,73 @@
             <div id="header"><h1>AEROPLICITY</h1></div>
             <div id="nav" class="panel panel-default">
                 <div class="panel-body">
-                    <h4>Flying from: </h4>
-                    <span id="airport"> ATL</span>
-                    <h4>To: </h4>
-                    <span id="dest"> LAX</span>
+                    <h4>Flying from: <span id="airport"> ATL</span> </h4> 
+                    <h4>To:   <span id="dest"> LAX</span> </h4>
                 </div>
             </div>
-            <div>
 
-                <div id="flightscol" class="column" class="panel panel-default">
+
+            <div id="flightscol">
+                <div  class="column panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Today</h3>
+                    </div>
                     <div id="flightinfo" class="panel-body">
                         <div id="airline" >
                             <span id="logo"></span>
-                    
+
                             <span id="alname">Delta</span>
                         </div>
                         <div id="price">
                             <a>
-                                500
+                                $500
                             </a>
                         </div>
-<!--
-                        <div id="departure"></div>
-                        <div di="arrival"></div>
--->
+
                     </div>
 
                 </div>
+
+                <div class="column panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">In 30 days</h3>
+                    </div>
+                    <div id="flightinfo" class="panel-body">
+                        <div id="airline" >
+                            <span id="logo"></span>
+
+                            <span id="alname">United Airlines</span>
+                        </div>
+                        <div id="price">
+                            <a>
+                                $511
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="column panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">In 6 months</h3>
+                    </div>
+                    <div id="flightinfo" class="panel-body">
+                        <div id="airline" >
+                            <span id="logo"></span>
+
+                            <span id="alname">Spirit</span>
+                        </div>
+                        <div id="price">
+                            <a>
+                                $311
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
-        <div id="footer">
-            Created by team 100k PP at Hack UGA
-        </div>
+
+            <div id="footer">
+                Created by team 100k PP at Hack UGA
+            </div>
         </div>
 
     </body>
