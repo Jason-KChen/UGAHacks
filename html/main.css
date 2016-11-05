@@ -1,0 +1,29 @@
+@charset "UTF-8";
+@import url(font-awesome.min.css);
+@import url("http://fonts.googleapis.com/css?family=Source+Sans+Pro:300");
+
+body{
+    font-family: "Source Sans Pro", Helvetica, sans-serif;
+    width:550px;
+    margin:0 auto;
+}
+
+.column{
+    width: 50%;
+}
+
+#header{
+    text-align: center;
+}
+
+#header > a{
+    text-align: center; 
+}
+#destination{
+    float: left;    
+}
+
+#flights{
+    float: right;
+}
+
