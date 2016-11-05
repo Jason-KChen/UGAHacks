@@ -8,7 +8,7 @@ body{
     margin:0 auto;
 }
 
-.column{
+.panel-body{
     width: 50%;
 }
 
@@ -19,11 +19,11 @@ body{
 #header > a{
     text-align: center; 
 }
-#destination{
+#destinationcol{
     float: left;    
 }
 
-#flights{
+#flightscol{
     float: right;
 }
 
