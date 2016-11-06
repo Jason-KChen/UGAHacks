@@ -7,3 +7,10 @@
         "</div>"+
         "<button type='submit' class='btn btn-default'>"+'Submit'+"</button>"+
       "</form>")});
+
+    $(function(){
+        var list = ["Los Angeles", "New York", "Las Vegas", "chicago", "san diego", "washington", "orlando", "houston", "seattle", "san antonio", "miami", "boston", "atlanta" ];
+        $( ".form-control" ).autocomplete({
+      source: list
+    });
+    });

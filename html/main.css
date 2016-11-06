@@ -19,7 +19,7 @@ body{
 }
 #header{
     text-align: center;
-    color: #a6a6a6 !important; 
+    color: #a6a6a6   !important; 
 }
 
 #header > a{
@@ -45,7 +45,8 @@ body{
 }
 #nav{
     margin-bottom: 5pt;
-
+    padding-top: 5pt;
+    padding-bottom: 5pt;
 }
 .menu{
     display: inline-block;
