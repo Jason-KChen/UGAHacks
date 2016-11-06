@@ -31,3 +31,18 @@ function testAPICall(origin, destination, date) {
         extractCheapest(sessionKey);
     })
 }
+
+var datesForAPI = [];
+
+function setDatesForAPI() {
+    var today = new Date();
+    var todayDate = today.toISOString().substring(0, 10);
+    datesForAPI.push(todayDate);
+    today.setDate(today.getDate() + 30);
+    var todayOffset30 = today.toISOString().substring(0, 10);
+    datesForAPI.push(todayOffset30);
+    today.setDate(today.getDate() + 150);
+    var todayOffset180 = today.toISOString().substring(0, 10);
+    datesForAPI.push(todayOffset180);
+    console.log(datesForAPI);
+}
