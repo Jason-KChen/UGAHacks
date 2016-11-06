@@ -14,7 +14,7 @@ function extractCheapest(sessionKey, index) {
        console.log(dataArr); 
         var price = "price";
         var alname = "alname";
-        document.getElementById('price1').innerHTML = dataArr[0,1];
+        //document.getElementById('price1').innerHTML = dataArr[0,1];
         
         for(var i = 0; i < dataArr.length; i++)
             {
@@ -32,7 +32,9 @@ function extractCheapest(sessionKey, index) {
                         else if(j==2)
                             {
                                 //document.getElementById("a"+(i+1)).setAttribute("href", dataArr[i][j]);
+                                console.log(i + " " + j);
                                 $('#a'+i).attr("href", dataArr[i][j]);
+                                console.log(i + " " + dataArr[i][j]);
                             }
                         else{
                             
