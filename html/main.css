@@ -9,16 +9,17 @@ body{
     text-align: center;
 }
 
-.column{
-
+#wrap{
+    background-color: #cce6ff;
 }
 
-.panel-default{
+.panel-primary{
     width: 80%;
     margin: auto;
 }
 #header{
     text-align: center;
+    color: #a6a6a6 !important; 
 }
 
 #header > a{
@@ -26,6 +27,7 @@ body{
 }
 #footer{
     font-size: 5pt;
+    background-color: #cce6ff;
 }
 
 
@@ -62,6 +64,16 @@ body{
     border-radius: 20%;
     border-color:dimgray;
 }
-#chart_div{
-    
+.list-group-item{
+  color: #66b3ff;
+  background-color: #e6e6ff !important;
+  border-color: #66b3ff;
+}
+
+.list-group-item:hover{
+    background-color: white !important;
+    color: #5bc0de;
+}
+a{
+    text-decoration: none !important;
 }
