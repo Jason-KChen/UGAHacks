@@ -57,9 +57,11 @@ body{
 #fromto{
     
 }
-#graph{
-       
+#graph{       
     border: solid;
     border-radius: 20%;
     border-color:dimgray;
+}
+#chart_div{
+    
 }
