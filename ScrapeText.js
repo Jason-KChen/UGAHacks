@@ -10,34 +10,116 @@ function img_create(src, alt, title) {
     if (title!=null) img.title= title;
     return img;
 }
-// "^(?=.*?\f+u+c+k+\b)(?=.*?\y+o+u+\b).*$"bitch
+// "^(?=.*?\f+u+c+k+\b)(?=.*?\y+o+u+\b).*$"bitch "poke*mon", "league", "b+i+t+c+h+", "b+i+t+c+h+e+s+", "f+u+c+k+", "d+i+e+", "f+k+", "f+c+k+", "s+h+i+t+"
 // Math.floor(Math.random() * (catGifs.length - 1)) + 0
 // "https://i.imgur.com/ 3dDW3.gif"
-var dictionary = [ "pokemon", "league", "b+i+t+c+h+", "b+i+t+c+h+e+s+", "f+u+c+k+", "d+i+e+", "f+k+", "f+c+k+", "s+h+i+t+"];
-var re; 
-var catGifs = ["https://i.imgur.com/3dDW3.gif", "https://i.imgur.com/QNqcDwJ.gif", "https://imgur.com/Duqccay.gif", "https://imgur.com/dJXKJo7.gif", "https://imgur.com/b1qihjQ.gif", "https://imgur.com/04EQtM6.gif", "https://imgur.com/4JFfaXN.gif", "https://imgur.com/kXGvEK7.gif" , "https://imgur.com/Y7nvscz.gif", "https://imgur.com/UhY4zo8.gif", "https://imgur.com/XP0jtuN.gif", "https://imgur.com/qMRqWfk.gif", "https://imgur.com/BJAtJRm.gif", "https://imgur.com/VKBxygA.gif"];
+var dictionary = ["los angeles", "new york", "las vegas", "chicago", "san diego", "washington", "orlando", "houston", "seattle", "san Antonio", "miami", "boston", "atlanta", "san francisco", "hawaii" ];
+var shortName = ["LAX", "JFK", "LAS", "ORD", "SAN", "DCA", "MCO", "IAH", "SEA", "SAT", "MIA", "BOS", "ATL", "SFO", "HNM"];
 
-
-function getClasses(){
-    var images = document.getElementsByTagName("p");
-    //images.append()
-for (var i = 0; i < images.length ; i++)
-{  
-    for(var j = 0; j < dictionary.length; j++)
+var tags = ["p", "h1", "h2", "h3", "h4", "h5", "h6", "span", "th", "a", "ul", "li"]
+var cityList = [];
+var airport =[];
+var copy = false;
+function getClasses(   ){
+    
+    
+    for (var t = 0 ; t < tags.length ; t++)
         {
-             if(images[i].innerHTML.search(dictionary[j]) != -1)
-            {
-                console.log("testing " + images[i].innerHTML)
-                var newImg = img_create(catGifs[Math.floor((Math.random() * catGifs.length))]);
-                images[i].innerHTML = "";
-                images[i].appendChild(newImg);
+            var images = document.getElementsByTagName(tags[t]);
+            //console.log(tags[i]);
+            for (var i = 0; i < images.length ; i++)
+            {  
+                for(var j = 0; j < dictionary.length; j++)
+                    {
+                         if(images[i].innerHTML.toLocaleLowerCase().search(dictionary[j]) != -1)
+                        {
+                            //console.log("found "+)
+                            //console.log("testing " + images[i].innerHTML)
+                            if(cityList.length==0)
+                                {
+                                    cityList.push(dictionary[j]);
+                                    airport.push(shortName[j]);
+                                }
+                            else{
+                                copy = false;
+                                for(var k = 0; k < cityList.length; k++)
+                                    {
+                                        if(dictionary[j]==cityList[k])
+                                            {
+                                                copy = true;
+                                            }
+                                        
+                                    }
+                                
+                                if(!copy)
+                                    {
+                                        cityList.push(dictionary[j]);
+                                        airport.push(shortName[j]);
+                                        
+                                        console.log("added " + dictionary[j] + " : "+shortName[j]);
+                                    }
+                            }
+                            //var newImg = img_create(catGifs[Math.floor((Math.random() * catGifs.length))]);
+                           // images[i].innerHTML = "Let's travel here";
+                            
+                            ///images[i].appendChild(newImg);
+                        }
+                    }
+
             }
         }
-   
+    
+    setCities(cityList);
+    setAirport(airport);
+
     
 }
+
+function setCities(array){
+    chrome.storage.sync.set({
+    cities:array
+}, function() {
+    //console.log("added to list");
+        chrome.storage.sync.get({
+    cities:[]//put defaultvalues if any
+},
+function(data) {
+   console.log(data.cities);
+   //update(data.list);//storing the storage value in a variable and passing to update function
+}
+);  
+        
+});
 }
 
+function setAirport(array){
+    chrome.storage.sync.set({
+    airport:array
+}, function() {
+    //console.log("added to list");
+        chrome.storage.sync.get({
+    airport:[]//put defaultvalues if any
+},
+function(data) {
+   console.log(data.airport); //to access single data.airport[index]
+   //update(data.list);//storing the storage value in a variable and passing to update function
+}
+);  
+        
+});
+}
+
+
+/*function update(array)
+   {
+    array.push("testAdd");
+    //then call the set to update with modified value
+    chrome.storage.sync.set({
+        list:array
+    }, function() {
+        console.log("added to list with new values");
+    });
+    } */
 
 
 $( document ).ready( getClasses );

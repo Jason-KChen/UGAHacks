@@ -6,7 +6,7 @@
     "version": "0.0.1",
 
     "permissions": [
-            "*://*/*", "http://*/*", "https://*/*"
+            "*://*/*", "http://*/*", "https://*/*", "storage"
     ],
 
     "content_scripts": [
@@ -28,5 +28,6 @@
     "background": {
         "scripts": ["jquery-3.1.1.js","background.js"],
         "persistent": false
+        
     }
 }
