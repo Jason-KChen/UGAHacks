@@ -14,7 +14,7 @@ $("#submit").click(function(){
         $('.overlay').hide();
         $('#getBtn').show();
         var airport = $('.form-control').val();
-        alert(airport);
+        
         $('#airport').html(airport);
 });
     $(function(){

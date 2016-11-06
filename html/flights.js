@@ -13,4 +13,13 @@ window.onload = function() {
     //call the api
     InitiateAPIRequest("ATL", url);
     
+  /*  chrome.storage.sync.get({
+    prices:[]//put defaultvalues if any
+    },
+function(data) {
+   console.log(data.prices); //to access single data.airport[index]
+   //update(data.list);//storing the storage value in a variable and passing to update function 
+}
+);   */
+    
 }
