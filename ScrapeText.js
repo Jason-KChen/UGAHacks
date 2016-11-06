@@ -1,8 +1,8 @@
-$( document ).ready(getClasses);
+
 //email me this one please
 function img_create(src, alt, title) {
     var img= document.createElement('img');
-    console.log(src);
+    //console.log(src);
     img.src= src;
     img.style.height = '300px';
     img.style.width = '400px';
@@ -20,15 +20,24 @@ var catGifs = ["https://i.imgur.com/3dDW3.gif", "https://i.imgur.com/QNqcDwJ.gif
 
 function getClasses(){
     var images = document.getElementsByTagName("p");
+    //images.append()
 for (var i = 0; i < images.length ; i++)
 {  
-
-    if(search(images[i].innerHTML))
-    {
-        var newImg = img_create(catGifs[Math.floor((Math.random() * catGifs.length))]);
-        images[i].innerHTML = "";
-        images[i].appendChild(newImg);
-    }
+    for(var j = 0; j < dictionary.length; j++)
+        {
+             if(images[i].innerHTML.search(dictionary[j]) != -1)
+            {
+                console.log("testing " + images[i].innerHTML)
+                var newImg = img_create(catGifs[Math.floor((Math.random() * catGifs.length))]);
+                images[i].innerHTML = "";
+                images[i].appendChild(newImg);
+            }
+        }
+   
     
 }
 }
+
+
+
+$( document ).ready( getClasses );
