@@ -53,18 +53,27 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
             if (method == "POST") {
                 returnArray.push(xhr.getResponseHeader('Location'))
             } else {
-                //window.alert(data["Itineraries"][0]["PricingOptions"][0]["Agents"][0].toString());
-                var agentName = convertAgentIDtoName(data["Itineraries"][0]["PricingOptions"][0]["Agents"][0].toString());
-                var ticketPrice = data["Itineraries"][0]["PricingOptions"][0]["Price"].toString();
-                var deeplink = data["Itineraries"][0]["PricingOptions"][0]["DeeplinkUrl"];
-                //window.alert(pos + "pos is ");
-                // arrayOfInfo[pos].push(agentName);
-                // arrayOfInfo[pos].push(ticketPrice);
-                // arrayOfInfo[pos].push(deeplink);
-                returnArray.push(agentName);
-                returnArray.push(ticketPrice);
-                returnArray.push(deeplink);
-                returnArray.push(pos.toString());
+                if (data["Itineraries"].length > 0) {
+                    //window.alert(data["Itineraries"][0]["PricingOptions"][0]["Agents"][0].toString());
+                    var agentName = convertAgentIDtoName(data["Itineraries"][0]["PricingOptions"][0]["Agents"][0].toString());
+                    //window.alert("index is " + pos);
+                    var ticketPrice = data["Itineraries"][0]["PricingOptions"][0]["Price"].toString();
+                    //window.alert("index is " + pos);
+                    var deeplink = data["Itineraries"][0]["PricingOptions"][0]["DeeplinkUrl"];
+                    //window.alert("index is " + pos);
+                    //window.alert(pos + "pos is ");
+                    // arrayOfInfo[pos].push(agentName);
+                    // arrayOfInfo[pos].push(ticketPrice);
+                    // arrayOfInfo[pos].push(deeplink);
+                    returnArray.push(agentName);
+                    returnArray.push(ticketPrice);
+                    returnArray.push(deeplink);
+                    returnArray.push(pos.toString());
+                } else {
+                    //window.alert("No flights");
+                    returnArray = ["Unidentified", "?", "#", pos.toString()];
+                }
+
             }
 
             sendResponse({
