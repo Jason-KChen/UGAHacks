@@ -8,7 +8,9 @@
         <!-- Optional theme -->
         <link rel="stylesheet" href="https://maxc   dn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 
-
+        <link rel="stylesheet" href="../jquery-ui.css">
+        <link rel="stylesheet" href="../jquery-ui.structure.css">
+        
         <script src="../jquery-3.1.1.js"></script>
         <script src="../jquery-ui.js"></script>
         <!-- Latest compiled and minified JavaScript -->
@@ -20,11 +22,18 @@
             <div id="nav">
                     
                     <a href="#">Flying from: </a>
-                    <span id="airport">ATL</span>
+                    <span id="airport"></span>
                     <br>
                 <div>
                     <button id = "getBtn" type="button" class="btn btn-info">Get Location</button>
-
+                </div>
+                <div class="overlay">
+                    <form>
+                        <div class="searchPanel">
+                            <input type='text' class='form-control' style='width: 50%; margin: auto' placeholder='Search'>
+                        <button type="button" id="submit" class="submit btn btn-default">Submit</button>
+                        </div>
+                    </form>
                 </div>
             </div>
             <div>
