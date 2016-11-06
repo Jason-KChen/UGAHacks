@@ -4,27 +4,77 @@
 
 body{
     font-family: "Source Sans Pro", Helvetica, sans-serif;
-    width:550px;
+    width:290px;
     margin:0 auto;
-}
-
-.column{
-    width: 50%;
-    display: inline-block;
-}
-
-#header{
     text-align: center;
 }
 
+#wrap{
+    background-color: #cce6ff;
+}
+
+.panel-primary{
+    width: 80%;
+    margin: auto;
+}
+#header{
+    text-align: center;
+    color: #a6a6a6   !important; 
+}
+
 #header > a{
-    text-align: center; 
+    
 }
-#destinationcol{
-    float: left;    
-}
-
-#flightscol{
-    float: right;
+#footer{
+    font-size: 5pt;
+    background-color: #cce6ff;
 }
 
+
+#airline{
+    float: left;
+
+}
+#price{
+    float: right;   
+}
+
+.list-group{
+    width: 80%;
+    margin: auto;
+}
+#nav{
+    margin-bottom: 5pt;
+    padding-top: 5pt;
+    padding-bottom: 5pt;
+}
+.menu{
+    display: inline-block;
+}
+#back{
+   
+    border: solid;
+    border-radius: 20%;
+    border-color:dimgray;
+}
+#fromto{
+    
+}
+#graph{       
+    border: solid;
+    border-radius: 20%;
+    border-color:dimgray;
+}
+.list-group-item{
+  color: #66b3ff;
+  background-color: #e6e6ff !important;
+  border-color: #66b3ff;
+}
+
+.list-group-item:hover{
+    background-color: white !important;
+    color: #5bc0de;
+}
+a{
+    text-decoration: none !important;
+}
