@@ -1,25 +1,35 @@
+
 window.onload = function() {
-    
+    var start;
     console.log(document.URL);
+   // var url = document.URL
+   // var from = url.substring(url.indexOf("&")+1);
+   // from = from.substring(from.indexOf("=")+1)
+   // url = url.substring(url.indexOf("?")+1, url.indexOf("&"));
+  //  url = url.substring(url.indexOf("=")+1);
+    //var items = url.split("&")
     var url = document.URL
-    //var url = document.URL.search("?");
-   // url = url.substring(url.indexOf("?")+1);
     url = url.substring(url.indexOf("=")+1);
-    console.log(url);
-    document.getElementById('dest').innerHTML = url;
+    chrome.storage.sync.get("start",function(data){
+        //console.log(data.start);
+        start = data.start;
+       // console.log(start);
+        
+        
+        
+        console.log(start);
+        console.log(url);
+        //console.log(start);
+        document.getElementById('airport').innerHTML = start;
+        document.getElementById('dest').innerHTML = url;
     
-    //update the title
+  
+
+        InitiateAPIRequest(start, url);
+        
+    })
     
-    //call the api
-    InitiateAPIRequest("ATL", url);
     
-  /*  chrome.storage.sync.get({
-    prices:[]//put defaultvalues if any
-    },
-function(data) {
-   console.log(data.prices); //to access single data.airport[index]
-   //update(data.list);//storing the storage value in a variable and passing to update function 
-}
-);   */
+ 
     
 }

@@ -10,10 +10,6 @@ function(data) {
 }
 );  
         
-
-    
-    
-    
     
     console.log("inside");
     chrome.storage.sync.get({

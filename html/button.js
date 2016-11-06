@@ -14,7 +14,10 @@ $("#submit").click(function(){
         $('.overlay').hide();
         $('#getBtn').show();
         var airport = $('.form-control').val();
-        
+        chrome.storage.sync.set({start:airport});
+        chrome.storage.sync.get("start",function(data){
+            console.log(data.start);
+        })
         $('#airport').html(airport);
 });
     $(function(){
@@ -23,3 +26,12 @@ $("#submit").click(function(){
       source: list
     });
 });
+
+/*
+function redoURL(){
+    while(document.getElementById("a"+i)!=null)
+        {
+            
+        }
+    
+}  */
