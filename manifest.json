@@ -15,6 +15,7 @@
                 "js": [
                     "jquery-3.1.1.js",
                     "APIHelperFunctions.js",
+                    "CallsForPopUp.js",
                     "ScrapeText.js",
                     "ScrapeImg.js",
                     "ListOfCities.js"
@@ -27,8 +28,8 @@
     },
 
     "background": {
-        "scripts": ["jquery-3.1.1.js","background.js"],
-        "persistent": false
-        
+        "scripts": ["jquery-3.1.1.js","AgentsArray.js","background.js"],
+        "persistent": true
+
     }
 }

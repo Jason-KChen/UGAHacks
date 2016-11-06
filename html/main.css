@@ -79,3 +79,8 @@ body{
 a{
     text-decoration: none !important;
 }
+
+.overlay{
+   display: none;
+}
+
