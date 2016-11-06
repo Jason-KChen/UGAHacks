@@ -20,42 +20,23 @@
             <div id="header"><h1>AEROPLICITY</h1></div>
             <div id="nav">
                     
-                    <a href="#">Flying from: </a>
-                    <span id="airport">Atlanta (Hartsfield-Jackson ATL)</span>
-                    <br>
-                    <button type="button" class="btn btn-secondary">Get Location</button>
+                <div id="nav" class="panel panel-default">
+                 <a href="flights.html"><div id="back" class="menu panel-body">
+                   <span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span>
+                </div></a>
+                <div class="menu panel-body">
+                    <h4>Prices for flights within the year</h4>                    
+                </div>
+            </div>
            
             </div>
-            <div>
-<!--
-                <div id="destinationcol" class="column">
-                    <h4>Destinations</h4>
-                    <div id="destinationinfo">
-
-                        <div id="destname"></div>
-                        <a href="">View flights</a>
-
-                    </div>
-                </div>
--->
-                <ul class="list-group">
-                   <a href="flights.html"><li class="list-group-item">
-                      New York
-                   </li></a>
-                   <a href=""><li class="list-group-item">
-                      Los Angeles
-                   </li></a>
-                   <a href=""><li class="list-group-item">
-                      San Francisco
-                   </li></a>
-                </ul>
-            </div>
-            <div class="panel panel-default">
-                <div id="footer" class=""panel-footer"">
-                    Created by team 100k PP at Hack UGA
-                </div>
-            </div>
         </div>
-
+        
+        <!-- chart div -->
+        
+        <div id="chart_div"></div>
     </body>
+     <!--Load the AJAX API-->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript" src="graph.js"></script>
 </html>

@@ -4,7 +4,7 @@
 
 body{
     font-family: "Source Sans Pro", Helvetica, sans-serif;
-    width:275px;
+    width:290px;
     margin:0 auto;
     text-align: center;
 }
@@ -43,8 +43,23 @@ body{
 }
 #nav{
     margin-bottom: 5pt;
-}
 
-#flightinfo{
+}
+.menu{
+    display: inline-block;
+}
+#back{
+   
+    border: solid;
+    border-radius: 20%;
+    border-color:dimgray;
+}
+#fromto{
     
+}
+#graph{
+       
+    border: solid;
+    border-radius: 20%;
+    border-color:dimgray;
 }
