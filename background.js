@@ -44,8 +44,11 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
             if (method == "POST") {
                 returnArray.push(xhr.getResponseHeader('Location'))
             } else {
+                window.alert(data["Itineraries"][0]["PricingOptions"][0]["Agents"][0].toString());
+                var agentName = convertAgentIDtoName(data["Itineraries"][0]["PricingOptions"][0]["Agents"][0].toString());
                 var ticketPrice = data["Itineraries"][0]["PricingOptions"][0]["Price"].toString();
                 var deeplink = data["Itineraries"][0]["PricingOptions"][0]["DeeplinkUrl"];
+                returnArray.push(agentName);
                 returnArray.push(ticketPrice);
                 returnArray.push(deeplink);
             }
