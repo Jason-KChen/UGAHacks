@@ -31,20 +31,20 @@ function getClasses(   ){
             {  
                 for(var j = 0; j < dictionary.length; j++)
                     {
-                         if(images[i].innerHTML.toLocaleLowerCase().search(dictionary[j]) != -1)
+                         if(images[i].innerHTML.toUpperCase().search(dictionary[j].toUpperCase()) != -1)
                         {
                             //console.log("found "+)
                             //console.log("testing " + images[i].innerHTML)
                             if(cityList.length==0)
                                 {
-                                    cityList.push(dictionary[j]);
+                                    cityList.push(dictionary[j].toUpperCase());
                                     airport.push(shortName[j]);
                                 }
                             else{
                                 copy = false;
                                 for(var k = 0; k < cityList.length; k++)
                                     {
-                                        if(dictionary[j]==cityList[k])
+                                        if(dictionary[j].toUpperCase()==cityList[k])
                                             {
                                                 copy = true;
                                             }
@@ -53,7 +53,7 @@ function getClasses(   ){
                                 
                                 if(!copy)
                                     {
-                                        cityList.push(dictionary[j]);
+                                        cityList.push(dictionary[j].toUpperCase());
                                         airport.push(shortName[j]);
                                         
                                         console.log("added " + dictionary[j] + " : "+shortName[j]);
